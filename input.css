@@ -1,3 +1,109 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer reset {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	p,
+	figure,
+	picture {
+		margin: 0;
+	}
+
+	body {
+		line-height: 1.5;
+		min-height: 100vh;
+	}
+
+	img,
+	picture {
+		max-width: 100%;
+		display: block;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+}
+
+@layer base {
+	body {
+		font-family: 'Rubik', sans-serif;
+	}
+}
+
+@layer components {
+}
+
+@layer utilities {
+	.container {
+		padding-inline: 2rem;
+		margin-inline: auto;
+		max-width: 80rem;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+}
+
+.selected {
+	color: #fff;
+}
+
+.background-work {
+	background: linear-gradient(to bottom, hsl(15, 100%, 70%) 80%, transparent 80%);
+}
+
+.background-play {
+	background: linear-gradient(to bottom, hsl(195, 74%, 62%) 80%, transparent 80%);
+}
+
+.background-study {
+	background: linear-gradient(to bottom, hsl(348, 100%, 68%) 80%, transparent 80%);
+}
+
+.background-exercise {
+	background: linear-gradient(to bottom, hsl(145, 58%, 55%) 80%, transparent 80%);
+}
+
+.background-social {
+	background: linear-gradient(to bottom, hsl(264, 64%, 52%) 80%, transparent 80%);
+}
+
+.background-selfcare {
+	background: linear-gradient(to bottom, hsl(43, 84%, 65%) 80%, transparent 80%);
+}

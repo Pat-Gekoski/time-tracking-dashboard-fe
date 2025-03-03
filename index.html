@@ -11,8 +11,177 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="css/style.css" />
+		<script src="./script.js" defer></script>
 	</head>
-	<body>
-		<h1 class="text-3xl">Simple Tailwind Starter</h1>
+	<body class="flex min-h-screen items-center justify-center bg-veryDarkBlue px-6 py-20">
+		<main class="grid w-full max-w-[1110px] gap-6 md:grid-cols-2 md:gap-5 lg:grid-cols-4">
+			<!-- Profile Card -->
+			<div
+				class="md:max-w-auto relative mx-auto w-full max-w-[350px] rounded-2xl bg-darkBlue md:col-span-2 md:flex md:max-w-[450px] lg:col-span-1 lg:row-span-2 lg:flex-col"
+			>
+				<div
+					class="flex items-center rounded-2xl bg-appBlue px-7 py-8 md:items-start lg:flex-1 lg:flex-col lg:items-start lg:gap-8"
+				>
+					<div class="mr-5 aspect-square h-16 flex-shrink-0 overflow-hidden rounded-full border-[3px] border-white lg:h-[72px]">
+						<img src="/images/image-jeremy.png" alt="" />
+					</div>
+					<div class="flex flex-col items-start gap-1">
+						<span class="font-Rubik mb-0 text-base font-extralight text-paleBlue">Report for</span>
+						<span
+							class="font-Rubik pb-0 text-[24px] font-extralight leading-[24px] text-white md:text-[32px] md:leading-[38px] lg:pb-14 lg:text-[40px] lg:leading-[48px]"
+						>
+							Jeremy Robson
+						</span>
+					</div>
+				</div>
+				<div class="mx-auto flex max-w-80 justify-between gap-2 p-7 md:flex-col md:px-8 lg:w-full">
+					<span data-day-selector="daily" class="cursor-pointer text-[18px] text-desaturatedBlue hover:text-white">Daily</span>
+					<span data-day-selector="weekly" class="selected cursor-pointer text-[18px] text-desaturatedBlue hover:text-white">
+						Weekly
+					</span>
+					<span data-day-selector="monthly" class="cursor-pointer text-[18px] text-desaturatedBlue hover:text-white">
+						Monthly
+					</span>
+				</div>
+			</div>
+			<!-- Work -->
+			<div class="relative mx-auto w-full max-w-[350px] md:max-w-full">
+				<div class="background-work relative h-full overflow-hidden rounded-xl pt-9 lg:pt-11">
+					<img src="/images/icon-work.svg" alt="Briefcase Icon" class="absolute -top-3 right-3" />
+
+					<div
+						class="hover:bg-darkBlueHover relative z-10 flex h-full w-full cursor-pointer flex-col gap-2 rounded-b-none rounded-tl-xl rounded-tr-xl bg-darkBlue px-6 py-7 lg:justify-between lg:p-6"
+					>
+						<div class="flex items-center justify-between">
+							<span class="text-lg font-medium text-white">Work</span>
+							<img
+								src="/images/icon-ellipsis.svg"
+								alt="Item menu"
+								class="pb-1 hover:brightness-0 hover:invert hover:filter"
+							/>
+						</div>
+						<div class="flex flex-wrap items-center justify-between gap-2">
+							<span class="text-4xl font-[300] text-white lg:text-5xl">32hrs</span>
+							<span class="text-[15px] text-desaturatedBlue">Last Week - 36hrs</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Play -->
+			<div class="relative mx-auto w-full max-w-[350px] md:max-w-full">
+				<div class="background-play relative h-full overflow-hidden rounded-xl pt-9 lg:pt-11">
+					<img src="/images/icon-play.svg" alt="Play Icon" class="absolute -top-3 right-3" />
+
+					<div
+						class="hover:bg-darkBlueHover relative z-10 flex h-full w-full cursor-pointer flex-col gap-2 rounded-b-none rounded-tl-xl rounded-tr-xl bg-darkBlue px-6 py-7 lg:justify-between lg:p-6"
+					>
+						<div class="flex items-center justify-between">
+							<span class="text-lg font-medium text-white">Play</span>
+							<img
+								src="/images/icon-ellipsis.svg"
+								alt="Item menu"
+								class="pb-1 hover:brightness-0 hover:invert hover:filter"
+							/>
+						</div>
+						<div class="flex flex-wrap items-center justify-between gap-2">
+							<span class="text-4xl font-[300] text-white lg:text-5xl">10hrs</span>
+							<span class="text-[15px] text-desaturatedBlue">Last Week - 36hrs</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Study -->
+			<div class="relative mx-auto w-full max-w-[350px] md:max-w-full">
+				<div class="background-study relative h-full overflow-hidden rounded-xl pt-9 lg:pt-11">
+					<img src="/images/icon-study.svg" alt="Study Icon" class="absolute -top-3 right-3" />
+
+					<div
+						class="hover:bg-darkBlueHover relative z-10 flex h-full w-full cursor-pointer flex-col gap-2 rounded-b-none rounded-tl-xl rounded-tr-xl bg-darkBlue px-6 py-7 lg:justify-between lg:p-6"
+					>
+						<div class="flex items-center justify-between">
+							<span class="text-lg font-medium text-white">Study</span>
+							<img
+								src="/images/icon-ellipsis.svg"
+								alt="Item menu"
+								class="pb-1 hover:brightness-0 hover:invert hover:filter"
+							/>
+						</div>
+						<div class="flex flex-wrap items-center justify-between gap-2">
+							<span class="text-4xl font-[300] text-white lg:text-5xl">4hrs</span>
+							<span class="text-[15px] text-desaturatedBlue">Last Week - 7hrs</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Exercise -->
+			<div class="relative mx-auto w-full max-w-[350px] md:max-w-full">
+				<div class="background-exercise relative h-full overflow-hidden rounded-xl pt-9 lg:pt-11">
+					<img src="/images/icon-exercise.svg" alt="Exercise Icon" class="absolute -top-3 right-3" />
+
+					<div
+						class="hover:bg-darkBlueHover relative z-10 flex h-full w-full cursor-pointer flex-col gap-2 rounded-b-none rounded-tl-xl rounded-tr-xl bg-darkBlue px-6 py-7 lg:justify-between lg:p-6"
+					>
+						<div class="flex items-center justify-between">
+							<span class="text-lg font-medium text-white">Exercise</span>
+							<img
+								src="/images/icon-ellipsis.svg"
+								alt="Item menu"
+								class="pb-1 hover:brightness-0 hover:invert hover:filter"
+							/>
+						</div>
+						<div class="flex flex-wrap items-center justify-between gap-2">
+							<span class="text-4xl font-[300] text-white lg:text-5xl">4hrs</span>
+							<span class="text-[15px] text-desaturatedBlue">Last Week - 5hrs</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Social -->
+			<div class="relative mx-auto w-full max-w-[350px] md:max-w-full">
+				<div class="background-social relative h-full overflow-hidden rounded-xl pt-9 lg:pt-11">
+					<img src="/images/icon-social.svg" alt="Social Icon" class="absolute -top-3 right-3" />
+
+					<div
+						class="hover:bg-darkBlueHover relative z-10 flex h-full w-full cursor-pointer flex-col gap-2 rounded-b-none rounded-tl-xl rounded-tr-xl bg-darkBlue px-6 py-7 lg:justify-between lg:p-6"
+					>
+						<div class="flex items-center justify-between">
+							<span class="text-lg font-medium text-white">Social</span>
+							<img
+								src="/images/icon-ellipsis.svg"
+								alt="Item menu"
+								class="pb-1 hover:brightness-0 hover:invert hover:filter"
+							/>
+						</div>
+						<div class="flex flex-wrap items-center justify-between gap-2">
+							<span class="text-4xl font-[300] text-white lg:text-5xl">5hrs</span>
+							<span class="text-[15px] text-desaturatedBlue">Last Week - 10hrs</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Self Care -->
+			<div class="relative mx-auto w-full max-w-[350px] md:max-w-full">
+				<div class="background-selfcare relative h-full overflow-hidden rounded-xl pt-9 lg:pt-11">
+					<img src="/images/icon-self-care.svg" alt="Self Care Icon" class="absolute -top-3 right-3" />
+
+					<div
+						class="hover:bg-darkBlueHover relative z-10 flex h-full w-full cursor-pointer flex-col gap-2 rounded-b-none rounded-tl-xl rounded-tr-xl bg-darkBlue px-6 py-7 lg:justify-between lg:p-6"
+					>
+						<div class="flex items-center justify-between">
+							<span class="text-lg font-medium text-white">Self Care</span>
+							<img
+								src="/images/icon-ellipsis.svg"
+								alt="Item menu"
+								class="pb-1 hover:brightness-0 hover:invert hover:filter"
+							/>
+						</div>
+						<div class="flex flex-wrap items-center justify-between gap-2">
+							<span class="text-4xl font-[300] text-white lg:text-5xl">2hrs</span>
+							<span class="text-[15px] text-desaturatedBlue">Last Week - 2hrs</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 	</body>
 </html>
